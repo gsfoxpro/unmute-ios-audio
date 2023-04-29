@@ -14,7 +14,7 @@ const USER_ACTIVATION_EVENTS = [
 ]
 
 function unmuteIosAudio () {
-  const AudioContext = window.webkitAudioContext
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
 
   // To detect iOS, check for touch device and confirm Safari-only
   // webkitAudioContext is present.
